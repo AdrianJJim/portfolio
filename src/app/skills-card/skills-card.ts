@@ -20,7 +20,7 @@ export class SkillsCard {
         { name: 'Laravel', img: 'assets/icons/logos--laravel.png' },
         { name: 'Angular', img: 'assets/icons/devicon--angular.png' },
         { name: 'Bootstrap', img: 'assets/icons/devicon--bootstrap.png' },
-        { name: 'TailwindCSS', img: 'assets/icons/devicon--tailwindcss.png' }
+        { name: 'Tailwind CSS', img: 'assets/icons/devicon--tailwindcss.png' }
       ]
     },
     {
