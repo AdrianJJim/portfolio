@@ -1,0 +1,49 @@
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <div *ngFor="let card of cards; let i = index" #card
+    class="animate-fade-up max-w-sm border rounded-lg shadow-sm flex flex-col bg-gray-900" style="border-color:#593280;"
+    [ngStyle]="{'transition-delay': (i * 0.1) + 's'}">
+
+    <a href="#">
+      <img class="rounded-t-lg w-full h-48 object-cover" [src]="card.imgUrl" />
+    </a>
+
+    <div class="p-5 flex flex-col flex-grow">
+
+      <a>
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#D1D1D1]">
+          {{ card.title }}
+        </h5>
+      </a>
+      <p class="mb-3 font-normal text-[#B0B0B0]">
+        {{ truncateText(card.description) }}
+      </p>
+
+      <div class="flex flex-wrap gap-2">
+        <span *ngFor="let skill of card.skills; let i = index" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#593280] 
+                     text-[#D1D1D1] text-sm transform transition-all duration-500 ease-out
+                     opacity-0 translate-y-4 animate-skill-fade" [ngStyle]="{'transition-delay': (i * 0.1) + 's'}">
+          <img [src]="skill.img" alt="{{ skill.name }}" class="w-6 h-6 object-contain" />
+          <span>{{ skill.name }}</span>
+        </span>
+      </div>
+
+      <div class="mt-auto pt-4">
+        <a [href]="card.github" target="_blank"
+          class="relative inline-flex items-center px-3 py-2 text-sm font-medium rounded-lg border border-[#593280] text-[#D1D1D1] bg-transparent overflow-hidden transition-all duration-600 ease-in-out
+          before:absolute before:inset-0 before:bg-[#593280] before:origin-left before:scale-x-0 before:transition-transform before:duration-700 before:ease-[cubic-bezier(0.77,0,0.175,1)] hover:before:scale-x-100 hover:text-white">
+          <span class="relative z-10 flex items-center">
+            GitHub
+            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 5h12m0 0L9 1m4 4L9 9" />
+            </svg>
+          </span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,56 @@
+<nav
+  class="bg-gray-900 relative mt-4 mb-6 mx-auto w-3/5 z-20 border shadow-sm rounded-xl bg-[#1F2937] border-[#593280] transform -translate-y-10 opacity-0 transition-all duration-700 ease-out animate-slide-in"
+  style="border-color:#593280;">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+
+    <button type="button"
+      class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-[#593280]"
+      aria-controls="navbar-sticky" aria-expanded="false" (click)="toggleMenu()">
+      <span class="sr-only">Open main menu</span>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <g fill="none">
+          <path
+            d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+          <path fill="#a8a8a8"
+            d="M20 18a1 1 0 0 1 .117 1.993L20 20H4a1 1 0 0 1-.117-1.993L4 18zm0-7a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0-7a1 1 0 1 1 0 2H4a1 1 0 0 1 0-2z" />
+        </g>
+      </svg>
+
+      <svg *ngIf="isMenuOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=adrijj2004@gmail.com" target="_blank"
+        class="relative overflow-hidden inline-flex items-center px-3 py-2 text-sm font-medium text-center rounded-lg border border-[#593280] text-[#D1D1D1] bg-transparent transition-all duration-600 ease-in-out before:absolute before:inset-0 before:bg-[#593280] before:origin-left before:scale-x-0 before:transition-transform before:duration-700 before:ease-[cubic-bezier(0.77,0,0.175,1)] hover:before:scale-x-100 hover:text-white">
+        <span class="relative z-10">Contact me</span>
+      </a>
+    </div>
+
+    <div class="items-center justify-between w-full md:flex md:w-auto md:order-1"
+      [ngClass]="{'hidden': !isMenuOpen, 'flex': isMenuOpen, 'md:flex': true}" id="navbar-sticky">
+      <ul
+        class="bg-gray-900 flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
+        style="border-color:#1E3A8A;">
+        <li><a href="#aboutMe"
+            class="relative block py-2 px-3 text-[#D1D1D1] hover:text-[#B0B0B0] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-[#B0B0B0] after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">About
+            me</a></li>
+        <li><a href="#competencias-tecnicas"
+            class="relative block py-2 px-3 text-[#D1D1D1] hover:text-[#B0B0B0] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-[#B0B0B0] after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">Skills</a>
+        </li>
+        <li><a href="#Experience"
+            class="relative block py-2 px-3 text-[#D1D1D1] hover:text-[#B0B0B0] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-[#B0B0B0] after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">Experience</a>
+        </li>
+        <li><a href="#Education"
+            class="relative block py-2 px-3 text-[#D1D1D1] hover:text-[#B0B0B0] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-[#B0B0B0] after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">Education</a>
+        </li>
+        <li><a href="#proyectos-personales"
+            class="relative block py-2 px-3 text-[#D1D1D1] hover:text-[#B0B0B0] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-[#B0B0B0] after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100">Projects</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

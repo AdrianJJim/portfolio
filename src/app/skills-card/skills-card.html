@@ -1,0 +1,25 @@
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg reveal"
+     #revealElement>
+  <table class="w-full text-base text-left rtl:text-right text-[#D1D1D1] bg-gray-900 ">
+    <tbody>
+      <tr *ngFor="let card of cards; let i = index" 
+          class="bg-gray-900 border border-[#593280] w-full">
+        
+        <th scope="row" 
+            class="px-6 py-5 font-medium bg-[#593280] text-[#D1D1D1] whitespace-nowrap text-lg">
+          {{ card.title }}
+        </th>
+
+        <td class="px-6 py-5 w-full">
+          <div class="flex flex-wrap gap-3 w-full">
+            <span *ngFor="let skill of card.skills; let j = index"
+                  class="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#593280] text-[#D1D1D1] transition-colors duration-300 w-fit">
+              <img [src]="skill.img" alt="{{ skill.name }}" class="w-6 h-6 object-contain"/>
+              <span class="text-base">{{ skill.name }}</span>
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
